@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Register!</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
+    <style>
+      body { padding-top: 50px; }
+    </style>
+  </head>
+  <body class="p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">    
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/showusers">All Users</a>
+            </li>
+          </ul>
+          <a class="btn btn-warning my-2 my-sm-0" href="/register">Register</a>
+        </div>
+      </div>
+    </nav>
+    <form class="m-5 mt-3 w-50" action="/register" method="post">
+      <fieldset>
+          <legend>Registration</legend>
+          <div class="form-group">
+            <label for="fullname" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Ravi Sharma">
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label mt-4">Email address</label>
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="assword" class="form-label mt-4">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+          </div>
+          <fieldset class="form-group">
+            <legend class="mt-4">Gender</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="gender" id="ratherNotSay" value="Rather Not Say" checked="">
+                Rather not say
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="gender" id="male" value="Male">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="gender" id="female" value="Female">
+                Female
+              </label>
+            </div>
+          </fieldset>
+          <div class="form-group">
+            <label for="city" class="form-label mt-4">City</label>
+            <select class="form-select" id="city" name="city">
+              <option disabled>Select city</option>
+              <option>Bangalore</option>
+              <option>Chennai</option>
+              <option>Delhi</option>
+              <option>Mumbai</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary mt-5">Register!</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
