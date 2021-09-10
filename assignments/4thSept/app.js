@@ -33,4 +33,7 @@ app.get("/contactFormSubmission",function(req,res){
     console.log(req.query)
     res.render(path.join(__dirname,"/contactFormSubmission.html"),{token: req.query.query});
 })
+app.get("/viewLogin",function(req,res){
+    res.sendFile(path.join(__dirname,"/login.html"));
+})
 app.listen(PORT1);
