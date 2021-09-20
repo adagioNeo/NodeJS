@@ -1,4 +1,4 @@
-const model = require('app.model');
+const model = require('../models/models');
 exports.createAuthor = function(req,res){
     const[name, age, gender] = req.body;
     const prodObj = new model({
