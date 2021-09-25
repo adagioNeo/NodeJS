@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var authorRouter = require('./routes/authors');
+var bookRouter = require('./routes/book');
 
 var app = express();
 
@@ -17,5 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/authors', authorRouter);
+app.use('/book',bookRouter);
 
 module.exports = app;
