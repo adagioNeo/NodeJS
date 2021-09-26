@@ -59,7 +59,6 @@ exports.removeUser = function (req, res) {
 exports.loginUser = function (req, res) {
     const { username, password } = req.body;
     Users.findById(function (err) {
-        if
     })
     const user = new LoginDetails({
         username, password
