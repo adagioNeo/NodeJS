@@ -12,7 +12,7 @@ exports.addBook = function(req,res){
     })
 };
 
-exports.getBooks = function (req, res, next) {
+exports.getBooks = function (req, res) {
 	Book.find(function (err, data) {
 		if (err) {
 			res.json({ status: 400, debug_data: err });
